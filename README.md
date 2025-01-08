@@ -101,4 +101,18 @@ In Powershell, initiate a perpetual ping by entering "ping 10.0.0.5 -t". Next, g
 <p>Go back into Network Settings in Azure and delete the security rule we just made. Then after a few seconds, observe the ping traffic resume in PowerShell/Wireshark. Finally, to stop the perpetual ping, eneter "Control C"</p>
 <br>
 
-<h3>Step 3:</h3>
+<h3>Step 3: SSH and DHCP Traffic </h3>
+<div style="display: flex; justify-content: space-between;">
+<img width="500" alt="Screenshot 2025-01-08 at 5 34 14 PM" src="https://github.com/user-attachments/assets/3d4a3010-ddf3-4de9-bdb7-e39ee7e20586" />
+</div>
+<p>Continuing on to observe Secure Shell (SSH) traffic, let's start a new packet capture by pressing the green button at the top and pressing "continue without saving". In short, SSH (Secure Shell) is a protocol used to securely access and manage remote computers over a network</p>
+<p>In the top search bar, search for ssh to begin filtering for ssh traffic.</p>
+<br><br>
+
+<div style="display: flex; justify-content: space-between;">
+<img width="1000" alt="Screenshot 2025-01-08 at 5 42 25 PM" src="https://github.com/user-attachments/assets/784fd256-f383-4005-a389-2270fed33f69" />
+</div>
+
+<p>We can then enter "ssh username@IPaddress" into PowerShell to SSH into our Linux VM. The username is whatever username was given to the Linux VM when we created it, in this case it is anakamura1. The IP address is the private IP address of the Linux VM which in this case is 10.0.0.5</p>
+  
+<p> After pressing enter, enter "yes", and type in the password for the LinuxVm. No text will appear as we type the password but simply hit enter after typing the password and we will succesfully SSH into the Linux VM. Notice in PowerShell we are now "anakamura1@LinuxVM". This shows us that we now have secure access and can manage the LinuxVM over the SSH network protocol.</p>
