@@ -68,3 +68,7 @@ In Azure, click into the Windows VM and copy the public IP address of the Window
 <p>
   Next, go back to the Linx VM we created in Azure and find the PRIVATE IP address within the configurations. Open up PowerShell and type in "ping 10.0.0.5". Since 10.0.0.5 is the private IP address of our Linux VM, we will be using it to ping our Linux VM from our Windows VM. Observe that after we hit enter in PowerShell, Wireshark shows us the network traffic that occurred when we pinged our Linux VM. We can see from the traffic that appears a "request" from our Windows VM and "reply" from the Linux VM occurs. Hooray for network traffic!
 </p>
+<br>
+<p>
+ BONUS: From PowerShell, ping a public website like Google.com. Enter ping google.com and observe the network traffic!
+</p>
