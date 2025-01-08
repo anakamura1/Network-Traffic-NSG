@@ -41,20 +41,27 @@
 </div>
 <p>
 In Azure, click into the Windows VM and copy the public IP address of the Windows VM and add a new PC in Remote Desktop or Windows App. This will allow us to log in to the Wndows VM</p>
-<br />
+<br /><br>
+
+<div style="display: flex; justify-content: space-between;">
+<img width="65%" alt="Screenshot 2025-01-08 at 3 38 52 PM" src="https://github.com/user-attachments/assets/ef7ece98-6bd2-4f65-8a7d-f413cb0df0cb" />
+<img width="30%" alt="Screenshot 2025-01-08 at 3 39 23 PM" src="https://github.com/user-attachments/assets/3f96cb86-ac44-4764-83df-455c3c79bede" />
+</div>
+<p>
+  After logging into the Windows VM with the username and password we assigned it at creation, go to the browser to install Wireshark. Be sure to download the Windows x64 version and run the Setup installer to finish installing Wireshark.
+</p>
+<br /><br>
+
+<div style="display: flex; justify-content: space-between;">
+<img width="45%" alt="Screenshot 2025-01-08 at 3 45 54 PM" src="https://github.com/user-attachments/assets/e1541369-cf1d-4ff4-89ac-44c3b1662fe1" />
+  <img width="45%" alt="Screenshot 2025-01-08 at 3 48 52 PM" src="https://github.com/user-attachments/assets/7c3159f6-6aee-4ef2-a878-0d305ae4e0a9" />
+
+</div>
+<p>
+  Once Wireshark has been installed, open it and begin observing the packet capture by clicking on "Ethernet". In the top search bar, type in icmp and hit enter to begin filtering for ICMP traffic. ICMP traffic is the network protocol that ping uses. A ping is simply a connection test between two devices, in our case it is between our Windows VM and our Linux VM. It sends a small packet of data over the internet to see if we can establish a connection.
+</p>
+<br /> <br>
 
 <p>
-<img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+  
 </p>
-<p>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-</p>
-<br />
-
-<p>
-<img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
-</p>
-<p>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-</p>
-<br />
