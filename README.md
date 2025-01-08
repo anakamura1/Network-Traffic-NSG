@@ -28,12 +28,13 @@
 
 <h2>High-Level Steps</h2>
 
-- Step 1: 
-- Step 2
+- Step 1: Observe ICMP Traffic
+- Step 2: Use NSG (Firewall) to Block Ping
 - Step 3
 - Step 4
 
 <h2>Actions and Observations</h2>
+<h3>Step 1: Observe ICMP Traffic</h3>
 
 <div style="display: flex; justify-content: space-between;">
 <img alt="Screenshot 2025-01-08 at 3 20 21 PM" src="https://github.com/user-attachments/assets/c653d1d7-37ca-446a-9b11-4b6bbf912d1d" width="70%"/>
@@ -71,3 +72,33 @@ In Azure, click into the Windows VM and copy the public IP address of the Window
 <br>
 
 **BONUS:** From PowerShell, ping a public website like Google.com. Enter ping google.com and observe the network traffic!
+<br>
+<h3> Step 2: Use NSG (Firewall) to Block Ping</h3>
+
+<div style="display: flex; justify-content: space-between;">
+<img width="40%" alt="Screenshot 2025-01-08 at 5 14 28 PM" src="https://github.com/user-attachments/assets/7e823b95-f8e3-4341-a430-f5989846b48b" />
+<img width="55%" alt="Screenshot 2025-01-08 at 5 04 26 PM" src="https://github.com/user-attachments/assets/5f5d2342-47eb-40b8-af44-64d167daf97d" />
+</div>
+<p>
+In Powershell, initiate a perpetual ping by entering "ping 10.0.0.5 -t". Next, go to the Linux VM Network Settings and click "Create port rule". Select "Inbound Port Rule". </p>
+<br><br>
+
+<div style="display: flex; justify-content: space-between;">
+<img width="500" alt="Screenshot 2025-01-08 at 5 08 04 PM" src="https://github.com/user-attachments/assets/ef7c84b4-9953-44d9-b670-a7d7a3a5b583" />
+</div>
+
+<p>For the Inbound Port Rule settings, be sure to select "ICMPv4", select "Deny", and put 290 for the priority. ICMPv4 is the protocol for ping traffic, so we need to select this for our Linux VM to deny inbound ping. 290 priority will in short cause the Linux VM to prioritize it over the other protocols that have a higher number value.</p>
+<br><br>
+<div style="display: flex; justify-content: space-between;">
+<img width="1000" alt="Screenshot 2025-01-08 at 5 18 18 PM" src="https://github.com/user-attachments/assets/0a87618e-3729-4ba1-814e-4bdfda56c216" />
+</div>
+
+<p> Once you add the rule, give it few seconds to deploy and observe the ping timeout in Powershell. Notice that the bottom number of requests in Wireshark do not show a reply. This means that our Windows VM is sending a ping (request) but the NSG rule is blocking it, causing a timeout, resulting in no reply from our Linux VM. The timeout shows us that our NSG rule was successful in blocking inbound ping! </p>
+<br><br>
+<div style="display: flex; justify-content: space-between;">
+<img width="1155" alt="Screenshot 2025-01-08 at 5 25 02 PM" src="https://github.com/user-attachments/assets/0be33a90-ce04-4f54-9001-71a39be45610" />
+</div>
+<p>Go back into Network Settings in Azure and delete the security rule we just made. Then after a few seconds, observe the ping traffic resume in PowerShell/Wireshark. Finally, to stop the perpetual ping, eneter "Control C"</p>
+<br>
+
+<h3>Step 3:</h3>
