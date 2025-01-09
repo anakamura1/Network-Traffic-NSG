@@ -76,8 +76,8 @@ In Azure, click into the Windows VM and copy the public IP address of the Window
 <h3> Step 2: Use NSG (Firewall) to Block Ping</h3>
 
 <div style="display: flex; justify-content: space-between;">
-<img width="32%" alt="Screenshot 2025-01-08 at 5 14 28 PM" src="https://github.com/user-attachments/assets/7e823b95-f8e3-4341-a430-f5989846b48b" />
-<img width="55%" alt="Screenshot 2025-01-08 at 5 04 26 PM" src="https://github.com/user-attachments/assets/5f5d2342-47eb-40b8-af44-64d167daf97d" />
+<img width="38%" alt="Screenshot 2025-01-08 at 5 14 28 PM" src="https://github.com/user-attachments/assets/7e823b95-f8e3-4341-a430-f5989846b48b" />
+<img width="60%" alt="Screenshot 2025-01-08 at 5 04 26 PM" src="https://github.com/user-attachments/assets/5f5d2342-47eb-40b8-af44-64d167daf97d" />
 </div>
 <p>
 In Powershell, initiate a perpetual ping by entering "ping 10.0.0.5 -t". Next, go to the Linux VM Network Settings and click "Create port rule". Select "Inbound Port Rule". </p>
