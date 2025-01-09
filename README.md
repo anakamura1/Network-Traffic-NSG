@@ -151,6 +151,8 @@ In Powershell, initiate a perpetual ping by entering "ping 10.0.0.5 -t". Next, g
 
 <p> The screen will freeze as we will momentarily drop connection to our VM but afterwards we see in Wireshark the release of our IP address and the receiving of a new address. The "Release Discover Offer Request Acknowledge" tells us that our VM released the IP address, sent out a discovery call to the DHCP server for an IP address, it received an offer from the server, requested the IP address, and the DHCP server acknowledged the request by assigning us the IP address.</p>
 
+<br><br>
+
 <h3>DNS and RDP Traffic</h3>
 <div style="display: flex; justify-content: space-between;">
 <img width="1000" alt="Screenshot 2025-01-08 at 7 02 59 PM" src="https://github.com/user-attachments/assets/0ae49aa8-4b87-4f57-9d1f-028585fa011c" />
@@ -162,3 +164,11 @@ We can observe DNS traffc by seeing how our VM asks the DNS server to resolve "g
 <p> In Wireshaark filter for "dns" and enter "nslookup google.com" into PowerShell. This will generate traffic for us to observe.</p>
 
 <p> On Wireshark we can see traffic from us (10.0.0.4) to the DNS server (168.63.129.16) and on the PowerShell side we see the various IP addresses given to us by the DNS server for google.com</p>
+<br>
+
+<h3>RDP</h3>
+<img width="1000" alt="Screenshot 2025-01-08 at 7 12 25 PM" src="https://github.com/user-attachments/assets/e99cc2b5-9c2b-4133-95f9-dc16bed6cf26" />
+
+<p>Remote Desktop Traffic can be observed in Wireshark by filtering for "tcp.port == 3389". We will notice that this is a lot traffic being generated and this is because by using a VM we are using an RDP. All of this traffic represents the VM sending our physical computer each image and activity going on. The RDP is constantly streaming a picture to us as we use the VM.</p>
+
+**If you are done with using the virtual machines, please remember to stop the VM's or delete the resource groups in Azure to prevent unnecessarily spending funds.**
