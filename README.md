@@ -3,7 +3,7 @@
 <img src="https://i.imgur.com/Ua7udoS.png" alt="Traffic Examination"/>
 </p>
 
-<h1>Observing Network Traffic and Network Security Groups Effects</h1>
+<h1>Observing Network Traffic and Network Security Group Effects</h1>
   
 <p>In this walkthrough, we will observe various network traffic to and from Azure Virtual Machines using PowerShell and Wireshark as well as see how traffic is affected with the use of Network Security Groups.</p>
   <br/>
