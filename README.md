@@ -41,7 +41,7 @@
   <img alt="Screenshot 2025-01-08 at 3 23 08 PM" src="https://github.com/user-attachments/assets/f789a2c3-cc16-4a26-a3f1-1ab061ed8b3e" width="26%"/>
 </div>
 <p>
-In Azure, click into the Windows VM and copy the public IP address of the Windows VM and add a new PC in Remote Desktop or Windows App. This will allow us to log in to the Wndows VM</p>
+In Azure, click into the Windows VM and copy the public IP address of the Windows VM and add a new PC in Remote Desktop or Windows App. This will allow us to log in to the Wndows VM.</p>
 <br /><br>
 
 <div style="display: flex; justify-content: space-between;">
