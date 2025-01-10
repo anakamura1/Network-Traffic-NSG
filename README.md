@@ -16,7 +16,7 @@
 
 - Microsoft Azure (Virtual Machines/Compute)
 - Remote Desktop (Windows) / Windows App (Mac)
-- Various Command-Line Tools
+- PowerShell
 - Various Network Protocols (ICMP, SSH, DHCP, DNS, RDP)
 - Wireshark (Protocol Analyzer)
 
